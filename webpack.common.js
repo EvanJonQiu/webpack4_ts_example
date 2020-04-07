@@ -2,6 +2,7 @@ const path = require("path");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 let mode = 'production';
 let mode_index = 0;
@@ -17,6 +18,7 @@ process.env.NODE_ENV = process.argv[mode_index + 1];
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
+  mode: process.argv[mode_index + 1],
   entry: "./src/main.tsx",
   output: {
     filename: "bundle.js",
@@ -54,7 +56,14 @@ module.exports = {
       },
       {
         test: /\.(gif|png|jpe?g|eot|woff|ttf|svg|pdf)$/,
-        use: ["file-loader"]
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              outputPath: 'images/'
+            }
+          }
+        ]
       }
     ]
   },
@@ -70,18 +79,16 @@ module.exports = {
       title: "An example of webpack 4 & typescript & react",
       filename: "index.html"
     }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    new CopyPlugin([
+      { from: './public' },
+    ])
   ],
   devtool: isDev ? 'source-map' : undefined,
-  watch: true,
+  watch: isDev ? true : false,
   watchOptions: {
     ignored: /node_modules/,
     aggregateTimeout: 300,
     poll: 1000
-  },
-  devServer: {
-    open: true,
-    hot: true,
-    port: 9000
   }
 };
