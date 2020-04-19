@@ -1,5 +1,6 @@
 import * as React from "react";
 import logo from "../assets/gnu.png"
+import "./Hello.scss";
 
 export interface HelloProps { compiler: string; framework: string; }
 
@@ -9,7 +10,7 @@ export class Hello extends React.Component<HelloProps, {}> {
     render() {
         return (
           <div>
-            <h1>Hello from {this.props.compiler} and {this.props.framework}!</h1>
+            <h1 className="myStyle">Hello from {this.props.compiler} and {this.props.framework}!</h1>
             <img src={logo} alt="gnu.png"/>
           </div>
         )

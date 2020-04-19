@@ -42,7 +42,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.css$/,
+        test: /\.(sa|sc|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -51,7 +51,8 @@ module.exports = {
               importLoaders: 1
             }
           },
-          "postcss-loader"
+          "postcss-loader",
+          "sass-loader"
         ]
       },
       {
@@ -71,6 +72,7 @@ module.exports = {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"]
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
@@ -79,7 +81,6 @@ module.exports = {
       title: "An example of webpack 4 & typescript & react",
       filename: "index.html"
     }),
-    new CleanWebpackPlugin(),
     new CopyPlugin([
       { from: './public' },
     ])
