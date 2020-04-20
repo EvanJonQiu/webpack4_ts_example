@@ -77,3 +77,7 @@
   ```
   npm install --save-dev sass-loader node-sass
   ```
+17. install url-loader
+  ```
+  npm install --save-dev url-loader
+  ```
