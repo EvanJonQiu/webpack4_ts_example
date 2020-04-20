@@ -73,3 +73,7 @@
   ```
   npm install --save-dev copy-webpack-plugin
   ```
+16. install sass-loader
+  ```
+  npm install --save-dev sass-loader node-sass
+  ```

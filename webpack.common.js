@@ -56,12 +56,13 @@ module.exports = {
         ]
       },
       {
-        test: /\.(gif|png|jpe?g|eot|woff|ttf|svg|pdf)$/,
+        test: /\.(gif|png|jpe?g|eot|woff2?|ttf|svg|pdf)$/,
         use: [
           {
-            loader: "file-loader",
+            loader: "url-loader",
             options: {
-              outputPath: 'images/'
+              limit: 1024 * 30,
+              fallback: "file-loader"
             }
           }
         ]
