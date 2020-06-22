@@ -36,7 +36,7 @@
   npm install --save react react-dom
   npm install --save-dev @types/react @types/react-dom
   ```
-9. if you want to use babel to transform TypeScript to plain JavaScript 
+10. if you want to use babel to transform TypeScript to plain JavaScript 
   ```
   npm install --save-dev @babel/core @babel/cli @babel/plugin-proposal-class-properties @babel/preset-env @babel/preset-typescript
   npm install --save-dev babel-loader
@@ -48,36 +48,36 @@
   - only use babel-loader
   - babel-loader and ts-loader can work together.
 
-10. install postcss-loader
+11. install postcss-loader
   ```
   npm install --save-dev postcss-loader
   npm install --save-dev autoprefixer
   ```
-11. install file-loader
+12. install file-loader
   ```
   npm install --save-dev file-loader
   ```
-12. install tslib
+13. install tslib
   ```
   npm install --save tslib
   ```
-13. install webpack-merge
+14. install webpack-merge
   ```
   npm install --save-dev webpack-merge
   ```
-14. install nuglifyjs-webpack-plugin
+15. install nuglifyjs-webpack-plugin
   ```
   npm install --save-dev uglifyjs-webpack-plugin 
   ```
-15. install copy-webpack-plugin
+16. install copy-webpack-plugin
   ```
   npm install --save-dev copy-webpack-plugin
   ```
-16. install sass-loader
+17. install sass-loader
   ```
   npm install --save-dev sass-loader node-sass
   ```
-17. install url-loader
+18. install url-loader
   ```
   npm install --save-dev url-loader
   ```
