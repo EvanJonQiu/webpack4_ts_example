@@ -5,9 +5,21 @@
     "sourceMap": true,
     "jsx": "react",
     "importHelpers": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@utils/*": ["./src/utils/*"],
+      "@app/*": ["./src/*"],
+      "tslib": ["./node_modules/tslib/tslib.d.ts"]
+    }
   },
+  "include":[
+    "./src/**/*",
+    "./src/images.d.ts"
+  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ]
 }

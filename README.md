@@ -81,3 +81,10 @@
   ```
   npm install --save-dev url-loader
   ```
+19. install jest framework
+  ```
+  npm install --save-dev @testing-library/jest-dom @testing-library/react @testing-library/react-hooks @types/jest
+  npm install --save-dev jest jest-dom
+  npm install --save-dev ts-jest
+  npm install --save-dev identity-obj-proxy
+  ```
