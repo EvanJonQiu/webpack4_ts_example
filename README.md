@@ -75,7 +75,7 @@
   ```
 17. install sass-loader
   ```
-  npm install --save-dev sass-loader node-sass
+  npm install --save-dev sass-loader node-sass sass-resources-loader
   ```
 18. install url-loader
   ```
@@ -88,3 +88,21 @@
   npm install --save-dev ts-jest
   npm install --save-dev identity-obj-proxy
   ```
+20. install eslint and prettier
+  ```
+  npm install --save-dev eslint eslint-config-prettier eslint-plugin-import eslint-plugin-prettier eslint-plugin-react
+  npm install --save-dev prettier
+  npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser
+  ```
+21. install terser
+  ```
+  npm install --save-dev terser-webpack-plugin
+  ```
+22. install less
+  ```
+  npm install --save-dev less less-loader
+  ```
+23. insall react-router-dom
+ ```
+ npm install --save react-router-dom @types/react-router-dom
+ ```
