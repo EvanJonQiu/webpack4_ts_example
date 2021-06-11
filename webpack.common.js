@@ -19,7 +19,7 @@ const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
   mode: process.argv[mode_index + 1],
-  entry: "./src/main.tsx",
+  entry: "./src/index.tsx",
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "./dist")

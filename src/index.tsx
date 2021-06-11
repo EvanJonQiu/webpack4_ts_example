@@ -1,10 +1,8 @@
-/// <reference path='./index.d.ts'/>
-
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import "./main.css";
+import "./index.css";
 
-import { Hello} from "./components/Hello";
+import { Hello } from "./components/Hello";
 
 ReactDOM.render(
   <Hello compiler="TypeScript" framework="React" />,
